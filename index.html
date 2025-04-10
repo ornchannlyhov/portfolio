@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ornchann Lyhov-Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">Ornchann<span> Lyhov</span></div>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span>Ornchann Lyhov</span></h1>
+                    <p>Computer Science Student | Full Stack Developer | Back-end Developer</p>
+                    <a href="#projects" class="btn">View My Work</a>
+                    <div class="social-links">
+                        <a href="https://github.com/ornchannlyhov" title="View My GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ornchann-lyhov-b477ab316/" title="View My Linkedin"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://t.me/ornchann_lyhov" title="Contact Vai Telegram"><i
+                                class="fab fa-telegram"></i></a>
+                        <a href="assets\images\profile\ornchann_lyhov-cv.pdf" target="_blank" title="Download My CV"><i
+                                class="fas fa-file-alt"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets\images\profile\myphoto-removebg.png" alt="About Lyhov">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets\images\profile\myphoto-removebg.png" alt="About Lyhov">
+                </div>
+                <div class="about-text">
+                    <h3>Computer Science Student at Cambodia Academy of Digital Techology</h3>
+                    <p>I'm a passionate computer science student with a focus on full-stack development and back-end
+                        development. I love solving complex problems and creating innovative solutions that make a
+                        difference.</p>
+                    <h4>Skill Sets</h4>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>PHP</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Laravel</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Flutter</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>HTML/CSS</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>C/C++</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Java</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>JavaScript/TypeScript</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Nest.js</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project cards will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be inserted by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Education</h2>
+            <div class="timeline">
+
+                <!-- Item 1: Tiket Project -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Jan 2025 - Mar 2024</div>
+                    <div class="timeline-content">
+                        <h3>Back-End Developer</h3>
+                        <p>Tiket - School Project (Capstone)</p>
+                        <p>Designed relational database schema (MySQL). Developed RESTful APIs using Laravel for user
+                            auth, ticket creation, payment processing (Stripe), data retrieval, and integrated
+                            third-party login (Facebook, Google).</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Tech Shop Project -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Dec 2024 - Jan 2025</div>
+                    <div class="timeline-content">
+                        <h3>Back-End Developer</h3>
+                        <p>Tech Shop - Personal Project</p>
+                        <p>Designed MySQL database schema. Implemented backend logic for RESTful API following MVC
+                            principles using Laravel, prepared for integration with a React front-end.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Receipts Project -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 2024 - Dec 2024</div>
+                    <div class="timeline-content">
+                        <h3>Full-Stack Developer</h3>
+                        <p>Receipts - School Project</p>
+                        <p>Implemented responsive UI/UX using Flutter. Designed backend logic including Models and
+                            Repositories for data query and CRUD operations.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: DG Shop Project -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Aug 2024 - Nov 2024</div>
+                    <div class="timeline-content">
+                        <h3>Full-Stack Developer</h3>
+                        <p>DG Shop - Personal Project</p>
+                        <p>Implemented UI/UX for buyer & seller portals. Designed database schema and implemented
+                            backend using Laravel (MVC). Managed project timeline/milestones using Agile/Scrum.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Automata Project -->
+                <div class="timeline-item">
+                    <!-- Dates not provided for Automata in CV/prompt -->
+                    <div class="timeline-date">Jan 2024 - Jul 2024</div>
+                    <div class="timeline-content">
+                        <h3>Front-End Developer</h3>
+                        <p>Automata - School Project</p>
+                        <p>Implemented interfaces with remarkable UX/UI using JavaScript focusing on real-time response.
+                            Designed input fields to format data matching backend requirements.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6: Education -->
+                <div class="timeline-item">
+                    <div class="timeline-date">Feb 2022 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor Degree of Computer Science</h3>
+                        <p>Cambodia Academy of Digital Technology (CADT)</p>
+                        <p>Specializing in Software Engineering. Relevant coursework and projects focused on backend
+                            development, APIs, databases, and full-stack principles.</p>
+                    </div>
+                </div>
+
+                <!-- Removed original placeholder items -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm currently looking for internship opportunities and would love to hear about your projects.
+                        Whether you have a question or just want to say hi, I'll do my best to get back to you!</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>ornchannlyhov@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(+855) 964 141 037</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kien Khleang Village, Chrouy Changva District, Phnom Penh
+                                City</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/ornchannlyhov" title="View My GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ornchann-lyhov-b477ab316/" title="View My Linkedin"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://t.me/ornchann_lyhov" title="Contact Vai Telegram"><i
+                                class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                        <p id="form-status" style="margin-top: 15px;"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Ornchann <span>Lyhov</span></div>
+                <ul class="footer-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <p class="copyright">© <span id="current-year"></span> Ornchann Lyhov. All rights reserved.</p>
+                <script>
+                    document.getElementById('current-year').textContent = new Date().getFullYear();
+                </script>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
