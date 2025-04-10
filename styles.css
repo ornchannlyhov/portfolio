@@ -218,16 +218,13 @@ nav {
     animation: float 3s ease-in-out infinite;
 }
 
-
 @keyframes float {
     0% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-20px);
     }
-
     100% {
         transform: translateY(0);
     }
@@ -362,8 +359,6 @@ nav {
     display: block;
 }
 
-
-
 .project-info {
     padding: 25px;
 }
@@ -425,7 +420,6 @@ nav {
         opacity: 0;
         transform: translateY(-50px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -898,12 +892,35 @@ footer {
         padding: 60px 0;
     }
 
-    .hero-text h1 {
-        font-size: 2rem;
+    /* Hero Section */
+    #hero {
+        height: auto;
+        padding: 100px 0 60px;
     }
-
+    
+    .hero-text h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    
     .hero-text p {
         font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-image img {
+        max-width: 220px;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .social-links a {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
     }
 
     .btn {
@@ -914,5 +931,96 @@ footer {
         margin: 10% auto;
         padding: 20px;
     }
+
+    /* Experience Section */
+    .timeline-item {
+        padding-left: 50px;
+    }
     
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-date {
+        position: relative;
+        display: inline-block;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        margin-bottom: 10px;
+    }
+    
+    /* Footer */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-links li {
+        margin: 10px 0;
+    }
+    
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+    
+    .copyright {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text .btn {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+    
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+}
+
+/* For very small devices (under 350px) */
+@media (max-width: 350px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    /* Adjust project cards for very small screens */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Make buttons full width on tiny screens */
+    .btn {
+        width: 100%;
+    }
+    
+    /* Adjust modal for very small screens */
+    .modal-content {
+        padding: 15px;
+        width: 95%;
+    }
+    
+    .modal-project-title {
+        font-size: 1.5rem;
+    }
 }
