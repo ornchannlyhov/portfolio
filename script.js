@@ -258,51 +258,30 @@ window.addEventListener('click', (e) => {
         document.body.style.overflow = 'auto';
     }
 });
-
-// Telegram Submission
 const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('form-status');
+
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     formStatus.textContent = 'Sending...';
 
-    // Get form values
     const name = document.getElementById('name').value;
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
 
-    const telegramBotToken = '8070276652:AAFiiIgIzhw21NA1fqJwsEcZThm77-BJ7ck';
-    const chatId = '1212242278';
-
-    // Check if placeholders are replaced
-    if (!telegramBotToken || !chatId) {
-        console.error('Bot Token or Chat ID is missing or not properly configured.');
-        formStatus.textContent = 'Configuration error. Cannot send message.';
-        formStatus.style.color = 'red';
-        return; // Stop submission
-    }
-
-    // Escape special characters for MarkdownV2
-    const escapeMarkdownV2 = (text) => {
-        return text.replace(/[_*[\]()~`>#+\-=|{}.!]/g, '\\$&');
-    };
-
-    // Construct the message text without email
-    const text = `*New Message from Portfolio*\n*Name:* ${escapeMarkdownV2(name)}\n*Subject:* ${escapeMarkdownV2(subject)}\n*Message:*\n${escapeMarkdownV2(message)}`;
-
-    // Encode the text for URL
-    const encodedText = encodeURIComponent(text);
-
-    // Send message to Telegram using the Bot API
-    fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage?chat_id=${chatId}&text=${encodedText}&parse_mode=MarkdownV2`)
+    fetch('/api/send_message.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, subject, message }),
+    })
         .then(response => response.json())
         .then(data => {
-            if (data.ok) {
+            if (data.success) {
                 formStatus.textContent = 'Thank you for Reaching Out! Your message has been sent.';
                 formStatus.style.color = 'green';
-                contactForm.reset(); // Reset the form
+                contactForm.reset();
             } else {
-                throw new Error(data.description || 'Telegram API request failed');
+                throw new Error(data.error || 'Failed to send message');
             }
         })
         .catch(error => {
@@ -311,11 +290,9 @@ contactForm.addEventListener('submit', (e) => {
             formStatus.style.color = 'red';
         })
         .finally(() => {
-            // Clear status after 5 seconds
             setTimeout(() => { formStatus.textContent = ''; }, 5000);
         });
 });
-
 
 // Smooth Scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
